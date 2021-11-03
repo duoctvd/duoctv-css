@@ -1,3 +1,10 @@
+:root {
+	--green: #57b846;
+	--white: #fff;
+	--gray: #ebebeb;
+	--deep-green: #1b3815;
+}
+
 .main{
 		width: 100%;
 		padding-top: 120px;
@@ -6,7 +13,6 @@
 
 .container {
 	/*border: 1px solid red;*/
-	/*width: 30%;*/
 	width: 500px;
 	text-align: center;
 	margin: auto;
@@ -27,14 +33,14 @@ form {
 
 
 .container ._heading {
-	background-color: #57b846;
+	background-color: var(--green);
 	line-height: 125px;
 	text-align: center;
 }
 
 .container ._heading span, button {
 	vertical-align: middle;
-    color: #fff;
+    color: var(--white);
     font-size: 30px;
     font-family: "JosefinSans-Bold";
 }
@@ -47,7 +53,7 @@ form {
 div input, button {
 	height: 55px;
 	border-radius: 27px;
-	background-color: #ebebeb;
+	background-color: var(--gray);
 	border: none;
 	padding: 0 35px;
 	width: 80%;
@@ -56,19 +62,19 @@ div input, button {
 }
 
 button {
-	background-color: #57b846;
+	background-color: var(--green);
 	font-size: 15px;
 	transition: 0.5s;
 }
 
 button:hover {
-	background: #1b3815;
+	background: var(--deep-green);
 	cursor: pointer;
 }
 
 
 ::placeholder {
-  color: #1b3815;
+  color: var(--deep-green);
   font-weight: bolder;
 }
 
@@ -87,7 +93,7 @@ button:hover {
 }
 
 ._green-color {
-	color: #57b846;
+	color: var(--green);
 	font-weight: bolder;
 	font-family: "JosefinSans-Bold";
 }
@@ -99,7 +105,48 @@ input:focus {
 }
 
 
-
 a {
 	text-decoration: none;
+}
+
+/*reposive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.container {
+		/*border: 1px solid red;*/
+		/*width: 30%;*/
+		width: 90%;
+	}
+
+	.container .item {
+		padding-top: 20px;
+
+	}
+
+	div input, button {
+		padding: 0 20px;
+	}
+
+	.sign-up-area {
+		padding-top: 100px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+/*tôi thấy nó ok nên k biết nên làm gì k?*/
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+/*tôi thấy nó ok nên k biết nên làm gì k?*/
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	/*tôi thấy nó ok nên k biết nên làm gì k?*/
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+/*tôi thấy nó ok nên k biết nên làm gì k?*/
 }
