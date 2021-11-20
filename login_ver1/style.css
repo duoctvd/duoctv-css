@@ -3,6 +3,7 @@
 Tiếp theo css mặc định cho các thẻ a,div,body,input,....
 Tiếp theo mới là css cho các id hoặc class
 như vầy t nghĩ sẽ dễ quản lý hơn*/
+
 :root {
 	--green: #57b846;
 	--white: #fff;
@@ -16,6 +17,10 @@ như vầy t nghĩ sẽ dễ quản lý hơn*/
 }
 
 /***** Css for common element  *****/
+
+body {
+	font-family: "JosefinSans-Bold";
+}
 
 form {
 	width: 100%;

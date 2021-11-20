@@ -1,0 +1,214 @@
+/*
+3. Về code, thường thì khai báo font-face t sẽ để lên đầu.
+Tiếp theo css mặc định cho các thẻ a,div,body,input,....
+Tiếp theo mới là css cho các id hoặc class
+như vầy t nghĩ sẽ dễ quản lý hơn*/
+
+:root {
+	--violet-color: #7579ff;
+	--light-violet-color: #b224ef;
+	--white-color: #fff;
+	--gray-color: #555;
+};
+
+/* common element */
+html, body {
+	height: 100%;
+	color: var(--white-color);
+}
+
+form {
+	text-align: center;;
+	padding-top: 100px;
+}
+
+input[type=text], input[type=password] {
+	width: 80%;
+	height: 30px;
+	font-size: 16px;
+	background: 0 0;
+	border: none;
+	color: var(--white-color);
+	border-bottom: 2px solid rgba(255,255,255,.24);
+	padding-left: 50px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	outline: none;
+}
+
+::placeholder { 
+	color: var(--white-color);
+}
+
+label {
+	cursor: pointer;
+	color: var(--white-color);
+}
+
+button {
+	height: 50px;
+	border-radius: 25px;
+	min-width: 120px;
+	background-color: var(--white-color);
+	border: none;
+	font-size: 16px;
+	transition: 0.9s;
+	color: var(--gray-color);
+}
+
+
+a {
+	text-decoration: none;
+	color: var(--white-color);
+}
+
+/* end common element */
+.main {
+	background-image: url("images/bg-01.jpg");
+	height: 100%;
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	background-size: cover;
+}
+
+.main:after {
+	backdrop-filter: blur(5px); 
+ 	content: "";
+ 	/*display: block;*/
+  	position: absolute;
+  	width: 100%; 
+  	height: 100%;
+  	top: 0;
+}
+
+.login {
+	height: 682px;
+	width: 500px;
+	background: linear-gradient(to bottom, var(--violet-color), var(--light-violet-color));
+	margin: auto;
+	border-radius: 10px;
+	position: relative;
+	top: 100px;
+	z-index: 1;
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+	.login {
+		width: 80%;
+	}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	.login {
+		width: 96%;
+		top: 10px;
+	}
+
+}
+
+.login_logo {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	margin: auto;
+	position: relative;
+	top: 40px;
+	background: url(images/landscape.png);
+    background-color: var(--white-color);
+    background-size: 80px 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item {
+	padding: 10px;
+}
+
+.heading {
+	font-size: 30px;
+	color: var(--white-color);
+}
+
+.user-icon {
+
+}
+
+.username {
+	position: relative;
+}
+
+.user-icon:after {
+	background: url("images/user.png") no-repeat;
+	background-size: 10px 20px;
+    width: 10px; 
+    height: 20px;
+    content:"";
+    position: absolute;
+    top: 32%;
+	left: 40px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	.user-icon:after {
+    	left: 20px;
+	}
+}
+
+.password {
+	position: relative;
+}
+
+.password-icon:after {
+	background: url("images/password.png") no-repeat;
+	background-size: 10px 20px;
+    width: 10px; 
+    height: 20px;
+    content:"";
+    position: absolute;
+    /*padding-left: 20px;*/
+    top: 32%;
+	left: 40px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	.password-icon:after {
+    	left: 20px;
+	}
+
+}
+
+.remember-me {
+	text-align: left;
+	width: 80%;
+	margin-left: 30px;
+}
+
+
+
+button:hover {
+	background: -webkit-linear-gradient(bottom, #7579ff, #b224ef);
+	cursor: pointer;
+}
+
+.forgot-password {
+	padding-top: 150px;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	/*tôi thấy nó ok nên k biết nên làm gì k?*/
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+/*tôi thấy nó ok nên k biết nên làm gì k?*/
+}
